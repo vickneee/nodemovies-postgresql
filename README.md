@@ -20,6 +20,7 @@ nodemovies-postgresql/
 └───services/
 │   └───Authenticate.js  
 │---.env
+│---README.md
 │---index.js
 │---package.json
 │---package-lock.json
