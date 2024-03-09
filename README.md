@@ -5,17 +5,19 @@ This is a simple example of a Node.js application that uses a Postgres database.
 ## Project Structure
 
 ```sh
-nodemovies-postgresql
-└───controllers
+nodemovies-postgresql/
+└───controllers/
 │   │---MovieController.js
 │   └───UserController.js
-└───db
-│   └───db.js   
-└───routes
+└───db/
+│   └───db.js
+└───public/
+│   └───image.png   
+└───routes/
 │   │---MovieRoutes.js
 │   │---UserRoutes.js
 │   └───AuthRoutes.js
-└───services
+└───services/
 │   └───Authenticate.js  
 │---.env
 │---index.js
