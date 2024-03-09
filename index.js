@@ -25,8 +25,8 @@ app.use('/auth', AuthRouter);
 
 // PostgresSQL connection
 db.connect() // Connect to the database
-    .then(() => console.log('Connected to Postgres')) // If the connection is successful, log a message
-    .catch(err => console.error('Failed to connect to Postgres', err)); // If the connection fails, log an error message
+    .then(() => console.log('Connected to Postgresql')) // If the connection is successful, log a message
+    .catch(err => console.error('Failed to connect to Postgresql', err)); // If the connection fails, log an error message
 
 // Start the server
 const port = process.env.PORT || 3000; // Use the PORT environment variable, or 3000 if it's not set
