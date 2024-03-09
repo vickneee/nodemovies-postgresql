@@ -25,19 +25,26 @@ nodemovies-postgres
 ```
 ## Setup
 
-1. To clone the repository, run the following command in the terminal:
+1. Create a new directory for the project and navigate into it:
+
+```bash
+mkdir nodemovies-postgres // Or name it whatever you want
+cd nodemovies-postgres
+```
+
+2. To clone the repository, run the following command in the terminal:
 
 ```bash
 git clone <required repository>
 ```
 
-2. To install the required dependencies, run the following command in the terminal:
+3. To install the required dependencies, run the following command in the terminal:
 
 ```bash
 npm install
 ```
 
-3. Create a file called `.env` to store environment variables:
+4. Create a file called `.env` to store environment variables:
 
 ```dotenv
 # .env
@@ -45,7 +52,7 @@ npm install
 SECRET_KEY="5b1a3923cc1e1e19523fd5c3f20b409509d3ff9d42710a4da095a2ce285b009f0c3730cd9b8e1af3eb84d";
 ```
 
-4. Create a Postgres database and a table to store movies:
+5. Create a Postgres database and a table to store movies:
 
 ```sql
 CREATE TABLE movies (
@@ -68,7 +75,7 @@ CREATE TABLE users (
 INSERT INTO users (email, password) VALUES ('example@email.com', 'password');
 ```
 
-4. Start the server:
+6. Start the server:
 
 ```bash
 npm start
@@ -96,9 +103,9 @@ npm install -g nodemon
 npm run dev
 ```
 
-6. Test the application using a tool like Postman.
+7. Test the application using a tool like Postman.
 
-7. The application provides the following API endpoints:
+8. The application provides the following API endpoints:
 
 ---
 
@@ -260,7 +267,7 @@ Delete a movie by ID.
 
 3. Click on the "Globals" button to create a new variable.
 
-4. In the "Globals", add a new variable named `Token` (or any name you prefer). You can add to the Initial value  `---`.
+4. In the "Globals," add a new variable named `Token` (or any name you prefer). You can add to the Initial value  `---`.
 
 5. To the Current value, add your token. Save. This will create a global variable that you can use in your requests. You can also create more variables if you want to use different tokens for different environments (e.g., development, testing, production)
 
