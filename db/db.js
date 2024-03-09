@@ -7,6 +7,6 @@ const db = new Pool({
     port: 5432, // Replace with your own port
     database: "movies", // Replace with your own database name
     password: "postgres" // Replace with your own password
-})
+});
 
 export default db;
