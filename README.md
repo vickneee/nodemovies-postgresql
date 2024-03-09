@@ -28,8 +28,8 @@ nodemovies-postgresql
 1. Create a new directory for the project and navigate into it:
 
 ```bash
-mkdir nodemovies-postgres // Or name it whatever you want
-cd nodemovies-postgres
+mkdir nodemovies-postgresql // Or name it whatever you want
+cd nodemovies-postgresql
 ```
 
 2. To clone the repository, run the following command in the terminal:
@@ -267,7 +267,7 @@ Delete a movie by ID.
 
 3. Click on the "Globals" button to create a new variable.
 
-4. In the "Globals," add a new variable named `Token` (or any name you prefer). You can add to the Initial value  `---`.
+4. In the "Globals," add a new variable named `Token` (or any name you prefer). You can add to the Initial value like this `---`.
 
 5. To the Current value, add your token. Save. This will create a global variable that you can use in your requests. You can also create more variables if you want to use different tokens for different environments (e.g., development, testing, production)
 
@@ -276,20 +276,21 @@ Delete a movie by ID.
 7. Now, when you send this request, it will include the Bearer token in the Authorization header, authorizing the request.
 
 ---
+1. Create a new User
 
-1. Get Token from Login
+2. Login with the new User to get the token
 
 ![Example Image](./public/1-GetTokenFromLogin.png)
 
-2. Make Global Variable
+3. Create a Global Variable
 
 ![Example Image](./public/2-MakeGlobalVariable.png)
 
-3. Use Global Variable
+4. Use the Global Variable in the Authorization Header
 
 ![Example Image](./public/3-UseGlobalVariable.png)
 
-4. Header with Authorization Bearer Token
+5. Use the Global Variable in the Authorization Header
 
 ![Example Image](./public/4-HeadersContainsAuthorizationToken.png)
 
@@ -305,7 +306,7 @@ Delete a movie by ID.
 
 ![Example Image](./public/UsersDb.png)
 
-3. WebStorm Database View
+3. WebStorm Database View of Movies Table and Users Table
 
 ![Example Image](./public/WebStormDatabaseView.png)
 
