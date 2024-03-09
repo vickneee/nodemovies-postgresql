@@ -8,7 +8,7 @@ const router = express.Router(); // Create a new router
 // This will prefix all routes in MovieRouter with '/movies' (e.g. '/movies', '/movies/:id')
 // app.use('/movies', MovieRouter);
 
-// Define routes for Movie also authenticate the routes
+// Define routes for Movies also authenticate the routes
 router.post("/", auth.authenticate, MovieController.addMovie);
 router.get('/', auth.authenticate, MovieController.getAllMovies);
 router.get('/:id', auth.authenticate, MovieController.getMovieById);
