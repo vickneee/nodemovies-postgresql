@@ -81,11 +81,12 @@ const authenticate = (req, res, next) => {
 
     const token = authHeader.split(' ')[1]; // Extract the token from the Authorization header
 
-    console.log('Token:', token); // Log the token
+    // console.log('Token:', token); // Log the token for debugging
 
     jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => { // Use the correct secret key
-        console.log('JWT verify error:', err); // Log the JWT verify error
-        console.log('JWT verify decoded:', decoded); // Log the JWT verify decoded
+
+        // console.log('JWT verify error:', err);  // Log the JWT verify error for debugging
+        // console.log('JWT verify decoded:', decoded); // Log the JWT verify decoded token for debugging
 
         if (err) {  // If the token is not successfully verified
             return res.status(500).send({auth: false, message: 'Failed to authenticate token.'});
