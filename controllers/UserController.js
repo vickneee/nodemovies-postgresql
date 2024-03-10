@@ -1,4 +1,4 @@
-import db from '../db/db.js';
+import pool from '../db/db.js';
 
 const UserController = {
 
@@ -11,7 +11,7 @@ const UserController = {
         }
 
         try {
-            const result = await db.query(query);
+            const result = await pool.query(query);
             if (result.rowCount === 0) {
                 // If the user was not added to the database, send a 500 Internal Server Error status code
                 res.status(500).send({error: 'User not added to database'});
@@ -36,7 +36,7 @@ const UserController = {
         }
 
         try { // The try block is used to catch any errors that occur when executing the query
-            const result = await db.query(query);
+            const result = await pool.query(query);
             if (result.rowCount === 0) {
                 return null;
             } else { // If the query was successful, return the first row of the result
@@ -57,7 +57,7 @@ const UserController = {
         }
 
         // The query method is used to execute the SQL query
-        db.query(query, (err, result) => {
+        pool.query(query, (err, result) => {
             if (err) { // The if statement is used to check if an error occurred when executing the query
                 console.error('Error executing query', err.stack);
                 res.status(500, result).send({error: 'Database error'});
@@ -76,7 +76,7 @@ const UserController = {
         }
 
         // The query method is used to execute the SQL query
-        db.query(query, (err, result) => {
+        pool.query(query, (err, result) => {
             if (err) { // The if statement is used to check if an error occurred when executing the query
                 console.error('Error executing query', err.stack);
                 res.status(500, result).send({error: 'Database error'});

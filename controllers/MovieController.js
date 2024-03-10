@@ -1,5 +1,5 @@
 import express from 'express';
-import db from '../db/db.js';
+import pool from '../db/db.js';
 
 const app = express(); // Create an instance of an Express app
 app.use(express.json()); // This middleware will allow us to parse JSON requests
@@ -10,7 +10,7 @@ const MovieController = {
     addMovie: async (req, res) => {
         const { title, director, year } = req.body;
         try { // Try to execute the query
-            await db.query('INSERT INTO movies (title, director, year) VALUES ($1, $2, $3)', [title, director, year]);
+            await pool.query('INSERT INTO movies (title, director, year) VALUES ($1, $2, $3)', [title, director, year]);
             res.status(201).json({ message: "Movie created successfully" });
         } catch (error) {  // If an error occurs, log it and send a 500 status code
             console.error("Error creating movie:", error);
@@ -21,7 +21,7 @@ const MovieController = {
     // GET all movies
     getAllMovies: async (req, res) => {
         try { // Try to execute the query
-            const result = await db.query('SELECT * FROM movies');
+            const result = await pool.query('SELECT * FROM movies');
             res.json(result.rows);
         } catch (error) { // If an error occurs, log it and send a 500 status code
             console.error("Error fetching movies:", error);
@@ -37,7 +37,7 @@ const MovieController = {
         }
 
         try { // Try to execute the query
-            const result = await db.query(query);
+            const result = await pool.query(query);
             if (result.rows.length > 0) {
                 res.json(result.rows[0]);
             } else { // If no movie is found, send a 404 status code
@@ -59,7 +59,7 @@ const MovieController = {
         }
 
         try { // Try to execute the query
-            await db.query(query);
+            await pool.query(query);
             res.json({ message: "Movie updated successfully" });
         } catch (error) { // If an error occurs, log it and send a 500 status code
             console.error("Error updating movie:", error);
@@ -76,7 +76,7 @@ const MovieController = {
         }
 
         try { // Try to execute the query
-            await db.query(query);
+            await pool.query(query);
             res.json({ message: "Movie deleted successfully" });
         } catch (error) { // If an error occurs, log it and send a 500 status code
             console.error("Error deleting movie:", error);

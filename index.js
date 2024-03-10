@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import MovieRouter from './routes/MovieRoutes.js';
 import UserRouter from './routes/UserRoutes.js';
 import AuthRouter from "./routes/AuthRoutes.js";
-import db from './db/db.js';
+import pool from './db/db.js';
 
 import bodyParser from "body-parser"; // This is a middleware that will help us parse the request body
 
@@ -24,7 +24,7 @@ app.use('/users', UserRouter);
 app.use('/auth', AuthRouter);
 
 // PostgresSQL connection
-db.connect() // Connect to the database
+pool.connect() // Connect to the database
     .then(() => console.log('Connected to Postgresql')) // If the connection is successful, log a message
     .catch(err => console.error('Failed to connect to Postgresql', err)); // If the connection fails, log an error message
 
