@@ -2,6 +2,13 @@
 
 This is a simple example of a Node.js application that uses a Postgres database. The application is a REST API that allows users to perform CRUD operations on a database of movies. The application uses the `pg` module to connect to the Postgres database and execute SQL queries.
 
+## Tools used
+
+[Postgres.app](https://postgresapp.com/)
+[Postman](https://www.postman.com/downloads/)
+[DbVisualizer](https://www.dbvis.com/download/)
+[WebStorm](https://www.jetbrains.com/webstorm/)
+
 ## Project Structure
 
 ```sh
