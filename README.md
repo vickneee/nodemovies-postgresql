@@ -312,3 +312,7 @@ Delete a movie by ID.
 
 ![Example Image](./public/WebStormDatabaseView.png)
 
+4. Server
+
+![Example Image](./public/PostgresServer)
+
