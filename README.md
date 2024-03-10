@@ -4,10 +4,10 @@ This is a simple example of a Node.js application that uses a Postgres database.
 
 ## Tools used
 
-[Postgres.app](https://postgresapp.com/)
-[Postman](https://www.postman.com/downloads/)
-[DbVisualizer](https://www.dbvis.com/download/)
-[WebStorm](https://www.jetbrains.com/webstorm/)
+- [Postgres.app](https://postgresapp.com/)
+- [Postman](https://www.postman.com/downloads/)
+- [DbVisualizer](https://www.dbvis.com/download/)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
 
 ## Project Structure
 
