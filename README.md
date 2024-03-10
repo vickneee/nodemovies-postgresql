@@ -5,19 +5,22 @@ This is a simple example of a Node.js application that uses a Postgres database.
 ## Project Structure
 
 ```sh
-nodemovies-postgresql
-└───controllers
+nodemovies-postgresql/
+└───controllers/
 │   │---MovieController.js
 │   └───UserController.js
-└───db
-│   └───db.js   
-└───routes
+└───db/
+│   └───db.js
+└───public/
+│   └───image.png   
+└───routes/
 │   │---MovieRoutes.js
 │   │---UserRoutes.js
 │   └───AuthRoutes.js
-└───services
+└───services/
 │   └───Authenticate.js  
 │---.env
+│---README.md
 │---index.js
 │---package.json
 │---package-lock.json
@@ -87,16 +90,6 @@ npm start
 
 ```bash
 npm install -g nodemon
-```
-
-- and add the following script to the `package.json` file:
-
-```json
-{
-  "scripts": {
-    "dev": "nodemon index.js"
-  }
-}
 ```
 
 - Then start the server using nodemon:
