@@ -92,16 +92,6 @@ npm start
 npm install -g nodemon
 ```
 
-- and add the following script to the `package.json` file:
-
-```json
-{
-  "scripts": {
-    "dev": "nodemon index.js"
-  }
-}
-```
-
 - Then start the server using nodemon:
 
 ```bash
