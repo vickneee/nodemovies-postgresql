@@ -315,4 +315,3 @@ Delete a movie by ID.
 4. Server
 
 ![Example Image](./public/PostgresServer.png)
-
