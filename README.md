@@ -59,7 +59,7 @@ npm install
 ```dotenv
 # .env
 # You can generate a random secret key using a tool like https://randomkeygen.com/
-SECRET_KEY="5b1a3923cc1e1e19523fd5c3f20b409509d3ff9d42710a4da095a2ce285b009f0c3730cd9b8e1af3eb84d";
+SECRET_KEY="f|IG/NY=wR|q}DWgV^Gst|]wr5g=E$";
 ```
 
 5. Create a Postgres database and a table to store movies:
