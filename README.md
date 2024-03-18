@@ -311,7 +311,3 @@ Delete a movie by ID.
 3. WebStorm Database View of Movies Table and Users Table
 
 ![Example Image](./public/WebStormDatabaseView.png)
-
-4. Server
-
-![Example Image](./public/PostgresServer.png)
