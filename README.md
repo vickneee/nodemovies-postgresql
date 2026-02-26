@@ -1,4 +1,4 @@
-# NodeMovies PostgreSQL Database with JWT & Bcrypt
+# NodeMovies – PostgreSQL Database with JWT & Bcrypt
 
 This is a simple example of a Node.js application that uses a Postgres database. The application is a REST API that allows users to perform CRUD operations on a database of movies. The application uses the `pg` module to connect to the Postgres database and execute SQL queries.
 
